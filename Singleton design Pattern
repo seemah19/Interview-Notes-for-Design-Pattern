@@ -1,0 +1,15 @@
+Steps to create a singleton class
+a. create a private instance
+b. create a private constructor
+c. provide only getter method which is public
+
+How to break the singleton design pattern
+1. Reflection
+a. Class<?> singletonClass = Class.forName("code_decode.SingletonClass") - it throws classnotfoundexception
+pakagename.classname
+b. Constructor<Singleton> constructor =(Constructor<Singleton>) singletonClass.getDeclaredConstructor(null); -no such element exception
+c. constructor.setAccessible(true);
+d. Singleton reflectionInstance = constructor.getInstance(); -it throws instantiation exception
+
+2. Serialization
+
